@@ -11,6 +11,7 @@ namespace MargaSoft
     {
         static void Main(string[] args)
         {
+            //This decision is straightforward, without optimizations.
             Console.WriteLine("Hello please provide a number of test:");
             int arrayCount;
             if(!Int32.TryParse(Console.ReadLine(), out arrayCount))
