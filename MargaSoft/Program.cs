@@ -18,9 +18,9 @@ namespace MargaSoft
                 Console.WriteLine("First argument must be integer");
                 Environment.Exit(1);
             }
-            if (arrayCount > 100 ||  arrayCount == 0)
+            if (arrayCount > 5 ||  arrayCount < 1)
             {
-                Console.WriteLine("First argument must be in range 1-100");
+                Console.WriteLine("First argument must be in range 1-5");
                 Environment.Exit(1);
             }
             Regex regex = new Regex("^[a-z]{1,100}$");
@@ -30,9 +30,9 @@ namespace MargaSoft
             {
                 Console.WriteLine("Please describe string " + (i + 1));
                 string str = Console.ReadLine();
-                if (regex.Matches(str).Count == 0)
+                if (regex.Matches(str).Count == 0 && str.Length < 1 || str.Length > 100000)
                 {
-                    Console.WriteLine("Rock must be a-z from 1-100");
+                    Console.WriteLine("Rock must be a-z from 1-100000");
                     Environment.Exit(1);
                 }
                 Console.WriteLine("Please provide index of char " + (i + 1));
